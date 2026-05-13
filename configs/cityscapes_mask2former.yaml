@@ -1,0 +1,20 @@
+# arguments for dataset
+dataset: cityscapes
+data_root: data/cityscapes/  # path to Cityscapes
+nclass: 19
+crop_size: 768 
+patch_size: 16
+align_corners: False
+
+# arguments for training
+epochs: 180 
+eval_epoch: 1
+batch_size: 4 # per GPU x 2 GPUs
+lr: 0.000005
+lr_multi: 10.0 
+conf_thresh: 0.95
+
+# arguments for model
+model: mask2former
+backbone: dinov3_large 
+lock_backbone: False 

@@ -1,0 +1,24 @@
+# arguments for dataset
+dataset: ade20k
+data_root: data/ADE20K/ADEChallengeData2016 # path to ADE20K 
+nclass: 150
+crop_size: 518
+patch_size: 14
+align_corners: False
+
+# arguments for training
+epochs: 60
+batch_size: 8 # per GPU
+lr: 0.000005
+lr_multi: 40.0
+criterion:
+  name: CELoss
+  kwargs:
+    ignore_index: 255
+conf_thresh: 0.95
+
+# arguments for model
+model: dpt
+backbone: dinov2_small
+# backbone: dinov2_base
+lock_backbone: False

@@ -53,7 +53,7 @@ client = OpenAI(
 
 
 def get_caption(url):
-    caption_prompt = "Directly describe with brevity and as brief as possible the scene or characters without any introductory phrase like 'This image shows', 'In the scene', 'This image depicts' or similar phrases. Just start describing the scene please."
+    # caption_prompt = "Directly describe with brevity and as brief as possible the scene or characters without any introductory phrase like 'This image shows', 'In the scene', 'This image depicts' or similar phrases. Just start describing the scene please."
 
     completion = client.chat.completions.create(
     extra_headers={
